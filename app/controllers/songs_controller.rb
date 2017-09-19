@@ -11,4 +11,9 @@ class SongsController < ApplicationController
         redirect_to album_path(params[:album_id])
     end
 
+    def destroy
+        Song.find(params[:id]).destroy
+        redirect_to album_path(params[:album_id])
+    end
+
 end
