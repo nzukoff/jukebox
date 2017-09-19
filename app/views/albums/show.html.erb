@@ -5,6 +5,16 @@
     <li>NAME: <%= @album.name %></li>
 </ul>
 
-<%= link_to "Delete", @album, method: :delete %>
+<h2>Songs</h2>
+<ul>
+<% @album.songs.each do |song| %>
+    <li><%= song.name %></li>
+<% end %>
+</ul>
+
+
+<%= link_to "Delete Album", @album, method: :delete %>
     
 <%= link_to "All Albums", albums_path %>
+
+<%= link_to "Add Song", new_album_song_path(@album) %>
