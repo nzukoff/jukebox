@@ -1,0 +1,10 @@
+<h1>Album <%= @album.id %> Detail</h1>
+
+<ul>
+    <li>ID: <%= @album.id %></li>
+    <li>NAME: <%= @album.name %></li>
+</ul>
+
+<%= link_to "Delete", @album, method: :delete %>
+    
+<%= link_to "All Albums", albums_path %>
